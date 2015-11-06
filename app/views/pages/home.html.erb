@@ -1,24 +1,24 @@
 <div class="container-fluid background">
 
-    <div class="row">
+    <div class="row align">
 
-      <div class="col-md-6 col-md-offset-1"> 
+      <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1"> 
           
         <div class="jumbotron">
           
           <h2>Welcome to MyRecipes!</h2>
           
-          <p>MyRecipes allows you to share your recipes with the world, make friends with fellow food enthusiasts and also learn from other aspiring chefs! </p>
+          <p class="hidden-xs hidden-sm">MyRecipes allows you to share your recipes with the world, make friends with fellow food enthusiasts and also learn from other aspiring chefs! </p>
           
           <p>Sign up to join the food revolution...</p>
           
-          <%= link_to "Sign up now!", "", class: "btn btn-style btn-large" %>
+          <%= link_to "Sign up now!", "#", class: "btn btn-lg btn-style" %>
           
         </div>
       
       </div>
       
-      <div class="col-md-4"> 
+      <div class="col-md-4 col-sm-4"> 
         
         <div class="thumbnail">
             
@@ -26,7 +26,7 @@
               
                 <h3>Browse Recipes as Guest</h3>
                 <p>Feel free to browse the recipes!</p>
-                <p><%= link_to "Browse Recipe Listings", "", class: "btn btn-style btn-small" %></p>
+                <%= link_to "Browse Recipe Listings", "#", class: "btn btn-style btn-md" %>
               
             </div>
             

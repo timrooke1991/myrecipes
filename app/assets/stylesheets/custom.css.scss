@@ -35,6 +35,10 @@
   border: 0px;
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   color: #E6E6E6;
+  padding: 0px 10px 0px 10px;
+  min-height: 30px;
+  margin-top: 9px;
+  font-size: 1em;
   
 }
 
@@ -67,13 +71,19 @@ h1 {
   position: relative;
 }
 
-.jumbotron, .thumbnail {
+.align {
   margin-top: 130px;
-  //width: 50%;
-  background-color: rgba(230,230,230,0.5);
+  
 }
 
-.jumbotron p, .jumbotron .btn-primary, .jumbotron h2 {
+.jumbotron, .thumbnail {
+
+  //width: 50%;
+  background-color: rgba(230,230,230,0.5);
+  border: 0px;
+}
+
+.jumbotron p, .jumbotron .btn-style, .jumbotron h2 {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -87,6 +97,10 @@ h1 {
   font-size: 1.2em;
   
 }
+
+
+
+
 
 
 
