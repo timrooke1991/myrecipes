@@ -1,3 +1,5 @@
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -76,16 +78,24 @@ h1 {
   
 }
 
+
 .jumbotron, .thumbnail {
 
   //width: 50%;
   background-color: rgba(230,230,230,0.5);
   border: 0px;
+  text-align: center;
 }
 
 .jumbotron p, .jumbotron .btn-style, .jumbotron h2 {
   margin-left: 10px;
   margin-right: 10px;
+  text-align: center;
+}
+
+.thumbnail {
+  
+  padding-bottom: 15px;
 }
 
 .btn-style {
@@ -95,8 +105,11 @@ h1 {
   color: #333333;
   font-weight: bold;
   font-size: 1.2em;
+  padding: 3px 8px 3px 8px;
   
 }
+
+
 
 
 
