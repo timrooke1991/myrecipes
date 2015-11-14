@@ -1,0 +1,44 @@
+<div class="container-fluid backdrop">
+
+<%= render 'shared/page_title', title: "All Recipes" %>
+
+<% @recipes.each do |recipe| %>
+
+  <div class="row well">
+    
+    <div class="media">
+    
+    <div class="col-md-2 hidden-xs hidden-sm">
+        
+        <div class="media-left media-bottom">
+            <%= gravatar_for recipe.chef, size: 100 %>
+            <h5><%= recipe.chef.chefname %></h5>
+          </a>
+        </div>
+    
+    </div>
+    
+    <div class="col-md-8">
+      
+      <section class="chef_info center">
+        
+        <div class="media-body">
+          <h4 class="media-heading"><%= link_to recipe.name, recipe_path(recipe) %></h4>
+          <p><%= recipe.summary %></p>
+              <p>
+                <span class="quiet"><small><%= time_ago_in_words(recipe.created_at) %></small></span>
+              </p>
+        </div>
+
+      </section>
+      
+      </div>
+    
+    </div>
+    
+  </div>
+  
+
+<% end %>
+
+</div>
