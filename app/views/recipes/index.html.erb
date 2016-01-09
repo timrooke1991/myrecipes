@@ -13,7 +13,7 @@
     <div class="col-md-2 hidden-xs hidden-sm">
         
         <div class="media-left media-bottom">
-            <%= gravatar_for recipe.chef, size: 100 %>
+            <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef) %>
             <h5><%= recipe.chef.chefname %></h5>
           </a>
         </div>
