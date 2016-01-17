@@ -36,10 +36,12 @@
         <div class="media-body">
           <h4 class="media-heading"><%= link_to recipe.name, recipe_path(recipe) %></h4>
           <p><%= recipe.summary %></p>
-          
+          <% if recipe.styles.any? %>
           <p>Style: <%= render recipe.styles %></p>
+          <% end %>
+          <% if recipe.ingredients.any? %>
           <p>Ingredients: <%= render recipe.ingredients %></p>
-          
+          <% end %>
               <p>
                 <span class="quiet"><small>created <%= time_ago_in_words(recipe.created_at) + " ago | "%></small></span>
                 <span class="quiet"><small> updated <%= time_ago_in_words(recipe.updated_at) %></small></span>
