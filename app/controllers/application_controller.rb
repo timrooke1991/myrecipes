@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     
     if !logged_in? 
       flash[:danger] = " You must be logged in to perform that action"
-      redirect_to :back
+      redirect_to recipes_path
       #Lauch login/register modal - would be a nice feature here overlaying the existing page
 
     end
