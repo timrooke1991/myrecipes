@@ -3,7 +3,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+.background {
+      //margin-top: -20px;
+  		height: 100%;
+  		width: 100%;
+  		background: url(background.jpeg);
+  		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+  		background-repeat: no-repeat;
+  		background-position: center top;
+  	}
 .navbar-inverse {
   background-color: #16393F;
   border-color: #3f1C16;
@@ -16,20 +27,50 @@
   
 }
 
-.navbar-inverse .navbar-nav > li > a {
-  color: #E6E6E6;
+.alert, .page-title {
+  margin-top: 75px;
 }
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > button {
+  color: #E6E6E6;
+  display: inline-block;
+}
+
+.navbar-nav {
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: right;
+  }
+  .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > button {
+  color: #E6E6E6;
+  display: inline;
+  }
+}
+
+.navbar-inverse .navbar-nav > li:hover > a {
+  background-color: #F3F3F3 !important;
+  color: #16393F !important; 
+}
+
+
 
 .navbar-brand {
   font-size: 1.5em;
   color: #E6E6E6 !important;
-  
+  margin-top: 9px;
+}
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px !important;
 }
 
 .dropdown {
-  margin-right:60px;
-  
- 
+  margin-right:40px;
 }
 
 .btn-default {
@@ -39,9 +80,19 @@
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   color: #E6E6E6;
   padding: 0px 10px 0px 10px;
-  min-height: 30px;
-  margin-top: 9px;
   font-size: 1em;
+  
+}
+
+.btn-login a {
+  background-color: #F3F3F3 !important;
+  color: #16393F !important; 
+  margin-right:80px;
+}
+
+.btn-login:hover{
+  background-color: #F3F3F3 !important;
+  color: #16393F !important; 
   
 }
 
@@ -55,19 +106,6 @@ html, body {
 .clear {
     clear: both;
 }
-
-.background {
-      //margin-top: -20px;
-  		height: 100%;
-  		width: 100%;
-  		background: url(background.jpeg);
-  		-webkit-background-size: cover;
-  		-moz-background-size: cover;
-  		-o-background-size: cover;
-  		background-size: cover;
-  		background-repeat: no-repeat;
-  		background-position: center top;
-  	}
   	
 h1 {
   //margin-top: -20px;
@@ -123,11 +161,15 @@ h1 {
   
 }
 
+body {
+  background-color: #E9EAED;
+
+}
+
 .backdrop {
-  height: 100%;
   width: 100%;
   background-color: #E9EAED;
-  padding: 55px;
+  padding: 55px 20px 20px 20px;
 }
 
 .page-title, .horizontal-line {
@@ -179,8 +221,9 @@ span.picture {
   
 }
 
-
-
+.recipe-item {
+  margin: 10px 0;
+}
 
 
 

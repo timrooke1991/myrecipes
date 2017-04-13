@@ -22,11 +22,13 @@
       <%= link_to "Edit this Recipe", edit_recipe_path(@recipe), class: "btn btn-style pull-right" %>
     
     <% end %>
+    
     <% if logged_in? and current_user.admin? %>
     
       <%= link_to "[Delete Recipe]", @recipe, method: :delete, data: { confirm: "Are you sure?" } %>
     
     <% end %>
+    
     <h3><%= @recipe.summary %></h3>
     
     <div class="show_recipe">
@@ -57,8 +59,6 @@
           <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp; <%= @recipe.thumbs_up_total %>
         
         <% end %> &nbsp;&nbsp;&nbsp;&nbsp;
-        
-        <div class="pull-right">
         
         <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
         

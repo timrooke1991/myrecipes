@@ -1,4 +1,6 @@
-<%= render 'shared/page_title', title: "Chef:" + @chef.chefname %>
+<div class="container-fluid backdrop">
+  
+<%= render 'shared/page_title', title: "Chef: " + @chef.chefname %>
 
   <div class="row">
     
@@ -20,11 +22,13 @@
     
   </div>
   
-  <% @recipes.each do |recipe| %>
-    <div class="row">
-    
-    <div class="col-md-6 col-md-offset-3">
-      
+  <hr>
+  
+<% @recipes.each do |recipe| %>
+
+<div class="row recipe-item">
+    <div class="col-md-6 col-md-offset-3">      
+
       <div class="media-body">
           <h4 class="media-heading"><%= link_to recipe.name, recipe_path(recipe) %></h4>  
         <section class="chef_info center">
@@ -42,8 +46,6 @@
               
               <% end %> &nbsp;&nbsp;&nbsp;&nbsp;
               
-              <div class="pull-right">
-              
               <%= link_to like_recipe_path(recipe, like: false), method: :post do %>
               
                 <i class="glyphicon glyphicon-thumbs-down"></i>&nbsp; <%= recipe.thumbs_down_total %>
@@ -51,12 +53,19 @@
               <% end %>
               
             </div>
-          </div>
-  
+
         </section>
         
       </div>
-      
-      </div>
+  </div>
     
-    <% end %>
+</div>    
+    
+<% end %>
+
+
+</div>
+
+    
+
+      

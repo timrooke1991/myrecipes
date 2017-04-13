@@ -32,9 +32,7 @@
 
               </div>
           
-          <%= link_to "Sign up now!", register_path, class: "btn btn-style btn-lg" %> 
-          
-          
+          <%= link_to "Sign up now!", register_path, class: "btn btn-style btn-lg" %>
           
           </form>
           
@@ -51,24 +49,16 @@
                 <h3>Log In</h3>
                 <p class="hidden-xs hidden-sm">Create, comment and share your recipes!</p>
                 
-                <form class="signup-form" method="post">
-
-                  <div class="form-group">
+                <%= form_tag '/login' do %>
     
-    	                <input type="email" name="loginemail" class="form-control" placeholder="Email">
-    
-                  </div>
-                  
-                  <div class="form-group">
-    
-    	                <input type="password" name="loginpassword" class="form-control" placeholder="Password">
-    
-                  </div>
+                <%= text_field_tag :email, nil, class:"form-control", placeholder: 'Your Email' %>
               
-                </form>
+                <%= password_field_tag :password, nil, class:"form-control", placeholder: 'Password' %>
                 
-                <%= link_to "Log In", login_path, class: "btn btn-style btn-md" %>
+                <%= submit_tag 'Login', class: "btn btn-style btn-md" %>
               
+              <% end %>
+                
             </div>
             
           </div>
